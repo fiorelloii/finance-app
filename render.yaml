@@ -3,8 +3,8 @@ services:
     name: finance-app-backend
     env: node
     plan: free
-    buildCommand: npm --prefix apps/backend install && npm --prefix apps/backend run build
-    startCommand: npm --prefix apps/backend start
+    buildCommand: npm install --prefix apps/backend && npm run build --prefix apps/backend
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production

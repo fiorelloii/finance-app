@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:frontend": "npm --prefix apps/frontend-react run deploy"
+    "deploy:frontend": "npm --prefix apps/frontend-react run deploy",
+    "build": "npm --prefix apps/backend run build",
+    "postinstall": "npm --prefix apps/backend install && npm --prefix apps/backend run build",
+    "start": "npm --prefix apps/backend start"
   },
   "keywords": [],
   "author": "",
