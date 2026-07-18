@@ -33,7 +33,7 @@ jobs:
 
       - name: Build frontend
         env:
-          VITE_API_BASE_URL: https://finance-app-backend.onrender.com
+          VITE_API_BASE_URL: https://finance-app-30mw.onrender.com
         run: npm --prefix apps/frontend-react run build
 
       - name: Upload artifact
