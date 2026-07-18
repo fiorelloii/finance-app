@@ -34,7 +34,12 @@ jobs:
       - name: Build frontend
         env:
           VITE_API_BASE_URL: https://finance-app-30mw.onrender.com
-        run: npm --prefix apps/frontend-react run build
+        run: |
+          npm --prefix apps/frontend-react run build
+          touch apps/frontend-react/dist/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
