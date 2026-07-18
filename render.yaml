@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: finance-app-backend
+    env: node
+    plan: free
+    buildCommand: npm --prefix apps/backend install && npm --prefix apps/backend run build
+    startCommand: npm --prefix apps/backend start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
